@@ -63,7 +63,8 @@ http.createServer(function(request, response) {
 
 // console.log(`listening on port ${port_number}`) //fix this
 
-
+//must be a git repo for this to work
+//so.. git init, git add ., got commit -m "" -- if starting without repo
 
 //in cmd line -> node server.js
 //ctrl c to exit
@@ -74,6 +75,7 @@ http.createServer(function(request, response) {
   // example "engines": {
    	//  "node": "12.13.x"
     // }
+
   //apply buildpack
   //https://github.com/heroku/heroku-buildpack-nodejs#v83 -a heroku-app-name
  //git add .
