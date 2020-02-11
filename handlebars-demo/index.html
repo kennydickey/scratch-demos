@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script id="address-template" type="text/x-handlebars-template">
+    <p>You can find me in {{city}}. My adress is {{address}}.</p>
+    <!-- 2nd example -->
+    {{description.escaped}}
+    {{example}} <!-- escaped (all) html rendered here -->
+    <br>
+    {{description.unescaped}}
+    {{{example}}} <!-- unescaped (inner) html rendered here -->
+    <!-- 3rdg exampele -->
+    {{#each people}}
+    <p>{{firstName}} {{lastName}}</p>
+    {{/each}}
+  </script>
+
+  <!-- new script for helpers -->
+  <script id="helpers-template" type="text/x-handlebars-template">
+  {{#each animals}}
+  <p>
+    <!-- use of our registered helper function! -->
+    The {{capitalize this.name}} says 
+    {{#if this.noise}}
+      "{{this.noise}}"
+    {{else}}
+      nothing since its a {{this.name}}
+    {{/if}}
+  </p>
+  {{/each}}
+  <!-- block helper ex -->
+  <p>The {{#uppercase}} konami {{/uppercase}} code is as follows</p>
+  <p>{{#uppercase}}{{code}}{{/uppercase}}</p>
+  </script>
+
+
+</head>
+
+<body>
+  <header>
+    
+    <div class="content-placeholder">hi</div>
+    <div class="content-placeholder2">hi</div>
+  </header>
+  
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.2/handlebars.amd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+  <script type="text/javascript" src="js/app.js"></script>
+  
+</body>
+</html>
